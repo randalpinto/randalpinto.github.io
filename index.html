@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <script type="text/javascript">
+  	function toggleInnerIframe() {
+		if(document.getElementById('inneriframe') === null) {
+			var iframe = document.createElement('iframe');
+			iframe.src = 'http://randalpinto.github.io/inner.html';
+			document.getElementById('iframecontainer').appendChild(iframe);
+		}
+		else {
+			var container = document.getElementById('iframecontainer');
+			while (container.firstChild) {
+				container.removeChild(container.firstChild);
+			}
+		}
+	}
+  </script>
+</head>
+
+<body>
+	<div>
+		<div id="iframecontainer">
+			<iframe id="inneriframe" src="http://randalpinto.github.io/inner.html"></iframe>
+		</div>
+		</div>
+			<button onclick="toggleInnerIframe();">Toggle</button>
+		</div>
+	</div>
+</body>
+
+</html>
