@@ -10,6 +10,9 @@
 			iframe.onload = function() {
 				console.log('inner iframe loaded...');
 			};
+			iframe.onmessage = function (ev) {
+				console.log('inner iframe got: ', ev);
+			};
 			document.getElementById('iframecontainer').appendChild(iframe);
 		}
 		else {
