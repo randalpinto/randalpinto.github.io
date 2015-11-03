@@ -7,6 +7,9 @@
 			var iframe = document.createElement('iframe');
 			iframe.id = 'inneriframe';
 			iframe.src = 'http://randalpinto.github.io/inner.html';
+			iframe.onload = function() {
+				console.log('inner iframe loaded...');
+			};
 			document.getElementById('iframecontainer').appendChild(iframe);
 		}
 		else {
@@ -16,6 +19,7 @@
 			}
 		}
 	}
+	
   </script>
 </head>
 
