@@ -5,6 +5,7 @@
   	function toggleInnerIframe() {
 		if(document.getElementById('inneriframe') === null) {
 			var iframe = document.createElement('iframe');
+			iframe.id = 'inneriframe';
 			iframe.src = 'http://randalpinto.github.io/inner.html';
 			document.getElementById('iframecontainer').appendChild(iframe);
 		}
